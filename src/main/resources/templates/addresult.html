@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/add" method="post">
+    <input type="text" size="8" name="i" value="0"/>
+    <input type="text" size="8" name="j" value="0"/>
+    <input type="submit" value="Add"/>
+</form>
+<p>Summan:</p>
+<p th:text="${summa}"></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Guess the Secret number 🍄: <br/>
+<form method="post" action="/game">
+  <input name="guess" type="text" size="8"/>
+  <br/>
+  <input name="button" type="submit" value="Guess"/>
+</form>
+<p th:text="${gameover}"></p>
+<table style="border: 3px solid #96D4D4;">
+    <tr th:each="guessAnswer:${answers}">
+    <td><span th:text="${guessAnswer}"></span> </td>
+    </tr>
+</table>
+
+</body>
+</html>
