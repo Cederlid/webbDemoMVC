@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {background-color: powderblue;}
+        h4 {color: crimson;}
+        p {color: black;}
+    </style>
 </head>
-<body>
-Guess the Secret number 🍄: <br/>
-<form method="post" action="/game">
-  <input name="guess" type="text" size="8"/>
-  <br/>
-  <input name="button" type="submit" value="Guess"/>
-</form>
-<p th:text="${gameover}"></p>
-<table style="border: 3px solid #96D4D4;">
-    <tr th:each="guessAnswer:${answers}">
-    <td><span th:text="${guessAnswer}"></span> </td>
-    </tr>
-</table>
-
-</body>
+<iframe src="https://giphy.com/embed/MN0C8AsaO0maDJ6SR9" style="float: right;" width="620" height="620" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pbsnature-grow-bloom-fungi-MN0C8AsaO0maDJ6SR9"></a></p>
+<h4>Guess the Secret number 🍄: <br/> </h4>
+    <form method="post" action="/game">
+        <input name="guess" type="text" size="8"/>
+        <br/>
+        <input name="button" type="submit" value="Guess"/>
+    </form>
+    <p th:text="${gameover}"></p>
+    <table style="border: 3px solid peachpuff;">
+        <tr th:each="guessAnswer:${answers}">
+            <td><span th:text="${guessAnswer}"></span> </td>
+        </tr>
+    </table>
 </html>
